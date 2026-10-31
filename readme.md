@@ -1,4 +1,4 @@
-<div style="text-align: center">
+<div align="center">
     <img src="imgs/LeetcodeNotes_logo.svg" alt="LeetcodeNotesLogo" width="600">
 </div>
 
