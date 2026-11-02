@@ -16,17 +16,17 @@ public class Solution2 {
         // 记录窗口的左边界left
         int left = 0;
         // 遍历字符串
-        for (int i = 0; i < length; i++) {
-            char c = s.charAt(i);
+        for (int right = 0; right < length; right++) {
+            char c = s.charAt(right);
             // 如果字符在hashmap中存在，则更新左边界
             if (hashMap.containsKey(c)) {
                 // 更新左边界为重复字符的下一个位置和当前左边界中的较大值
                 left = Math.max(left, hashMap.get(c) + 1);
             }
             // 将字符和对应的索引存入hashmap
-            hashMap.put(c, i);
+            hashMap.put(c, right);
             // 更新当前无重复字符的子串的长度
-            maxLength = Math.max(maxLength, i - left + 1);
+            maxLength = Math.max(maxLength, right - left + 1);
         }
         return maxLength;
     }
